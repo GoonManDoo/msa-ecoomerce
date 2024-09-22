@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: user-service
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
   cloud:
     bootstrap:
       enabled: true
@@ -12,11 +18,11 @@ spring:
     port: 5672
     username: guest
     password: guest
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/msa?serverTimezone=Asia/Seoul
-    username: root
-    password: root
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/msa?serverTimezone=Asia/Seoul
+#    username: root
+#    password: root
   jpa:
     database-platform: org.hibernate.dialect.MySQL57Dialect
     open-in-view: false
@@ -38,13 +44,13 @@ greeting:
 
 logging:
   level:
-    com.example.userservice: DEBUG
+    com.example.userservice.client: DEBUG
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, busrefresh
+        include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
 token:
   expiration_time: 86400000
