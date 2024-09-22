@@ -12,7 +12,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>apigateway-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>apigateway-service</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -71,6 +71,11 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
 		</dependency>
 
 		<dependency>
