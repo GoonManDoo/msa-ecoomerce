@@ -15,10 +15,10 @@ spring:
     config:
       server:
         native:
-          search-locations:file://${user.home}/Desktop/project/native-file-repo
+          search-locations: file:///C:/Users/PC/Desktop/project/native-file-repo
         git:
 #          uri: file:///C:/Users/PC/Desktop/project/git-local-repo
-          uri: https://github.com/GoonManDoo/config-service.git
+          uri: https://github.com/GoonManDoo/spring-cloud-config
           default-label: master
 management:
   endpoints:

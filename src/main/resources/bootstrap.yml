@@ -1,0 +1,7 @@
+encrypt:
+#  key: abcdefg5654
+  key-store:
+#    location: file:///C:/Users/PC/Desktop/project/keystore/apiEncryptionKey.jks
+    location: file:/apiEncryptionKey.jks
+    password: test1234
+    alias: apiEncryptionKey
