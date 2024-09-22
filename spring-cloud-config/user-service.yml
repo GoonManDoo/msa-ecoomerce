@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3307/msa_kafka?serverTimezone=Asia/Seoul
+    username: root
+    password: '{cipher}AQB7pjVJMZTDAJdR8XGAT2bGLuL1fRg9oHOzXwSwsAUs0Ihp7XG/srzQP7787LLMeGKU40xoLaVaJIcsk4CKGSQ05RSCYS7LvelW5+q2sS2ki2TAiW6NdgMOeaXUmSK7Ge0V5EGmzQ1Uz13brMRV8arEZ4u9WSjP6cgvSNJXOsF4Mm6VRL30KApWUsll7xvex41Rfhh7rGM/Q2tYQtvBhX/LgyqckRTIXvOnWUL1sqETTnqIBx1TjzaF1BHXFlFkORPJwhj9KbzEqCkYeBaZwO4NqZgvJn5ktK0X+akJfAw41Qs/4yCEgMDY4SmnWpVb77mjMesoAZb/I0LBkOWJOGk219mxLFyoojmU/E6UmLWajgheOijlQOAsTEUWPwTcmUA='
+
+token:
+  expiration_time: 864000000
+  secret: user_token_native_application
+
+gateway:
+  ip: 172.18.0.5
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    orders_is_empty: User's orders is empty.
